@@ -56,10 +56,3 @@ A simple, lightweight, and (almost) dependency-free registry mod for both fabric
    versionRange="[1.19.2,1.20.2)"
    ordering="NONE"
    side="BOTH"
-[[dependencies.james_registry_api]]
-   modId="architectury"
-   mandatory=true
-   # This version range declares a minimum of the current minecraft version up to but not including the next major version
-   versionRange="[6,)"
-   ordering="NONE"
-   side="BOTH"

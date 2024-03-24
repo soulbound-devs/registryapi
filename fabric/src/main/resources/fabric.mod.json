@@ -22,7 +22,6 @@
   ],
   "depends": {
     "fabricloader": ">=0.14.22",
-    "architectury": ">=2",
     "minecraft": ">=1.19.2"
   },
   "custom": {

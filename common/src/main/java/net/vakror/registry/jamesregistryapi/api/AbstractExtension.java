@@ -30,12 +30,6 @@ public abstract class AbstractExtension<T extends IRegistrationContext> {
 
     public abstract void register();
 
-    /**
-     * Use this for whatever you need to do right after the extension has been registered
-     * Runs only once
-     */
-    public void onRegistered() {}
-
     public abstract T getDefaultContext();
 
     public void setContext(IRegistrationContext context) {
@@ -49,13 +43,6 @@ public abstract class AbstractExtension<T extends IRegistrationContext> {
      * @param context the context that the extension used to register
      */
     public <X extends IRegistrationContext> void onRegister(AbstractExtension<?> extension, IRegistrationContext context) {}
-
-    /**
-     * @return whether the extension should be registered. This only is called during automatic registration
-     */
-    public boolean shouldRegister() {return true;}
-
-    public abstract Optional<List<ResourceLocation>> getAllowedContexts();
 
     @Override
     public String toString() {
