@@ -4,8 +4,8 @@
   "version": "${version}",
 
   "name": "James Registry API",
-  "description": "A simple, lightweight, and (almost) dependency-free registry mod for both fabric and forge!",
-  "authors": ["Vakror Alor (ItsMeNotJames)"],
+  "description": "",
+  "authors": [],
   "contact": {},
 
   "license": "MIT",
@@ -14,24 +14,15 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.vakror.registryapi.fabric.JamesRegistryFabric"
+      "net.vakror.registry.jamesregistryapi.fabric.JamesRegistryAPIFabric"
     ]
   },
   "mixins": [
-    "registryapi.mixins.json"
+    "james_registry_api.mixins.json",
+    "james_registry_api-common.mixins.json"
   ],
   "depends": {
-    "fabricloader": ">=0.14.22",
-    "minecraft": ">=1.19.2"
-  },
-  "custom": {
-    "modmenu": {
-      "links": {
-        "GitHub": "https://github.com/vaylor27/registryapi",
-        "Issues": "https://github.com/vaylor27/registryapi/issues"
-      },
-      "badges": [ "library" ],
-      "update_checker": false
-    }
+    "fabricloader": ">=0.15.7",
+    "minecraft": ">=1.20.2"
   }
 }

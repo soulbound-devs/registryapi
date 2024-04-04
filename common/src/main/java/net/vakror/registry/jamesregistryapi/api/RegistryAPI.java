@@ -59,6 +59,7 @@ public class RegistryAPI {
         Stopwatch stopwatch = Stopwatch.createStarted();
 
         EXTENSIONS.forEach((extension) -> {
+            if (extension.getAllowedContexts().isEmpty() && extension.shouldRegister()) {
                 JamesRegistryAPI.LOGGER.info("Registering for extension '{}' using context '{}'", extension.getExtensionName(), extension.context.getName());
                 Stopwatch stopwatch1 = Stopwatch.createStarted();
                 extension.register();
@@ -66,6 +67,7 @@ public class RegistryAPI {
                 JamesRegistryAPI.LOGGER.info("Finished Registration for extension '{}' with context '{}', \033[0;31mTook {}\033[0;0m", extension.getExtensionName(), extension.context.getName(), stopwatch1);
                 extension.onExtensionDoneRegistering();
                 onRegister(extension, extension.context);
+            }
         });
         stopwatch.stop();
         JamesRegistryAPI.LOGGER.info("Finished Registering, \033[0;31mTook {}\033[0;0m", stopwatch);

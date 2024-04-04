@@ -1,6 +1,6 @@
 plugins {
     id "architectury-plugin" version "3.4-SNAPSHOT"
-    id "dev.architectury.loom" version "1.1-SNAPSHOT" apply false
+    id "dev.architectury.loom" version "1.5-SNAPSHOT" apply false
 
     // Plugin to create merged jars
     id "io.github.pacifistmc.forgix" version "1.2.6"
@@ -12,7 +12,7 @@ architectury {
 
 forgix {
     group = "net.vakror.registry.jamesregistryapi"
-    mergedJarName = "registryapi-${rootProject.mod_version}-${rootProject.minecraft_version}.jar"
+    mergedJarName = "registryApi-${rootProject.mod_version}-${rootProject.minecraft_version}.jar"
 }
 
 

@@ -1,7 +1,7 @@
 package net.vakror.registry.jamesregistryapi;
 
 import com.google.common.base.Stopwatch;
-import dev.architectury.event.events.common.LifecycleEvent;
+import dev.architectury.event.EventResult;
 import net.vakror.registry.jamesregistryapi.api.RegistryAPI;
 import net.vakror.registry.jamesregistryapi.api.event.RegistryEvents;
 import net.vakror.registry.jamesregistryapi.api.event.SetupRegistryEvent;
@@ -13,14 +13,6 @@ public class JamesRegistryAPI {
 	public static final Logger LOGGER = LogManager.getLogger(MOD_ID);
 
 	public static void init() {
-		new JamesRegistryAPI();
-	}
-
-	public JamesRegistryAPI() {
-		LifecycleEvent.SETUP.register(this::onCommonSetup);
-	}
-
-	public void onCommonSetup() {
 		RegistryEvents.SETUP_REGISTRY_EVENT.invoker().post(new SetupRegistryEvent());
 		register();
 	}

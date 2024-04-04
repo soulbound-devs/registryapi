@@ -1,7 +1,7 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "net.vakror.registry.james_registry_api.mixin",
+  "package": "net.vakror.registry.james_registry_api.fabric.mixin",
   "compatibilityLevel": "JAVA_16",
   "mixins": [
   ],
