@@ -1,4 +1,4 @@
-package net.vakror.registry.jamesregistryapi.forge;
+package net.vakror.registry.jamesregistryapi.neoforge;
 
 import dev.architectury.event.EventHandler;
 import net.neoforged.fml.common.Mod;
