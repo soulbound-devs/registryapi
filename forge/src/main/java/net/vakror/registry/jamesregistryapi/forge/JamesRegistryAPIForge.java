@@ -9,6 +9,8 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 public class JamesRegistryAPIForge {
     public JamesRegistryAPIForge() {
 		// Submit our event bus to let architectury register our content on the right time
+        EventHandler.init();
+
         EventBuses.registerModEventBus(JamesRegistryAPI.MOD_ID, FMLJavaModLoadingContext.get().getModEventBus());
         JamesRegistryAPI.init();
     }
