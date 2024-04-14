@@ -55,8 +55,6 @@ public abstract class AbstractExtension<T extends IRegistrationContext> {
      */
     public boolean shouldRegister() {return true;}
 
-    public abstract Optional<List<ResourceLocation>> getAllowedContexts();
-
     @Override
     public String toString() {
         return getExtensionName().toString();
