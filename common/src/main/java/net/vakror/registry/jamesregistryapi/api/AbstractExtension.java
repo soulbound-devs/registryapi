@@ -30,12 +30,6 @@ public abstract class AbstractExtension<T extends IRegistrationContext> {
 
     public abstract void register();
 
-    /**
-     * Use this for whatever you need to do right after the extension has been registered
-     * Runs only once
-     */
-    public void onRegistered() {}
-
     public abstract T getDefaultContext();
 
     public void setContext(IRegistrationContext context) {
